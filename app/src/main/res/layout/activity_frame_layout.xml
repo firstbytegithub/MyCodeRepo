@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chengqi.mycoderepo.layouts.FrameLayoutActivity"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text 1234567"
+            android:id="@+id/textView7" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1234567890"
+            android:id="@+id/button38"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:background="#6400ffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text 890"
+            android:id="@+id/textView8"
+            android:background="#00ffffff" />
+
+        <SurfaceView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/surfaceView"
+            android:background="#b4e91111"
+            android:layout_marginLeft="5dp" />
+    </FrameLayout>
+</RelativeLayout>

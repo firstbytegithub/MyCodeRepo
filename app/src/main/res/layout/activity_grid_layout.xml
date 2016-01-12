@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chengqi.mycoderepo.layouts.GridLayoutActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="4"
+        android:rowCount="5">
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="1"
+            android:id="@+id/button47" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="2"
+            android:id="@+id/button48" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="3"
+            android:id="@+id/button49" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="/"
+            android:id="@+id/button50" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="4"
+            android:id="@+id/button51" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="5"
+            android:id="@+id/button52" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="6"
+            android:id="@+id/button53" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="X"
+            android:id="@+id/button54" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="7"
+            android:id="@+id/button55" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="8"
+            android:id="@+id/button56" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="9"
+            android:id="@+id/button57" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="-"
+            android:id="@+id/button58" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="0"
+            android:id="@+id/button59"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="."
+            android:id="@+id/button60" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="+"
+            android:id="@+id/button61"
+            android:layout_rowSpan="2"
+            android:layout_gravity="fill_vertical" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="="
+            android:id="@+id/button62"
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill_horizontal" />
+
+    </GridLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="excel"
+        android:id="@+id/button78"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

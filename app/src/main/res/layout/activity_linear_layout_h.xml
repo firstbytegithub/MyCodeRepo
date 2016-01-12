@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chengqi.mycoderepo.layouts.LinearLayoutHActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        android:layout_margin="0dp">
+
+        <SurfaceView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/surfaceView2"
+            android:background="#f40b0b"
+            android:layout_margin="0dp" />
+
+        <SurfaceView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/surfaceView3"
+            android:background="#48f00b" />
+
+        <SurfaceView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/surfaceView4"
+            android:background="#0333f7" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyTheme" parent="Theme.AppCompat.Dialog">
+
+    </style>
+
+    <style name="MyTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
+    <style name="material" parent="android:Theme.Material">
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+        <item name="android:statusBarColor">@color/statusbar</item>
+        <item name="android:navigationBarColor">@color/navi</item>
+    </style>
+
+    <style name="material2" parent="android:Theme.Material.Light.DarkActionBar">
+
+    </style>
+
+</resources>

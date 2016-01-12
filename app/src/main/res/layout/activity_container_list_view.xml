@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.chengqi.mycoderepo.containers.ContainerListViewActivity">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listView"
+        android:layout_below="@+id/button8" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="single checked"
+        android:id="@+id/button5"
+        android:layout_alignParentBottom="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="multi checked"
+        android:id="@+id/button6"
+        android:layout_below="@+id/button5"
+        android:layout_alignParentBottom="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="single choice"
+        android:id="@+id/button7"
+        android:layout_below="@+id/button6"
+        android:layout_alignParentBottom="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="multi choice"
+        android:id="@+id/button8"
+        android:layout_below="@+id/button7"
+        android:layout_alignParentBottom="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="custom item"
+        android:id="@+id/button36"
+        android:layout_toRightOf="@+id/button5"
+        android:layout_alignTop="@+id/button5"
+        android:layout_alignParentBottom="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="base adapter"
+        android:id="@+id/button37"
+        android:layout_below="@+id/button36"
+        android:layout_toRightOf="@+id/button7"
+        android:layout_alignParentBottom="false" />
+</RelativeLayout>

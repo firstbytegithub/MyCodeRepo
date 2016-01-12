@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chengqi.mycoderepo" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.example.chengqi.mycoderepo.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.chengqi.mycoderepo.app.AppActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.layouts.LayoutsActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.WidgetsActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.textfield.TextFieldsActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.containers.ContainersActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.datetime.DateTimeActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.ExpertActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.custom.CustomActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.app.AppActivityActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.app.DemoActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.app.DemoAppCompatActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.app.AppWindowActivity" />
+        <activity
+            android:name="com.example.chengqi.mycoderepo.app.AppThemeActivity"
+            android:theme="@style/material" />
+        <activity
+            android:name="com.example.chengqi.mycoderepo.app.AppTheme2Activity"
+            android:theme="@style/material2" />
+        <activity android:name="com.example.chengqi.mycoderepo.app.AppServiceActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.app.AppContentProviderActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.app.AppBroadCastReceiverActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.containers.ContainerRadioGroupActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.containers.ContainerListViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.containers.ContainerGridViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.containers.ContainerExpandableListViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.containers.ContainerScrollViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.containers.ContainerHorizontalScrollViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.containers.ContainerSearchViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.containers.ContainerTabHostActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.containers.ContainerVideoViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.containers.ContainerDialerFilterActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.custom.CustomViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.datetime.TextClockActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.datetime.AnalogClockActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.datetime.ChronometerActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.datetime.DatePickerActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.datetime.TimePickerActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.datetime.CalendarViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.SpaceActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.CheckedTextViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.QuickContactBadgeActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.ExtractEditTextActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.AutoCompleteTextViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.MultiAutoCompleteTextViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.NumberPickerActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.ZoomButtonActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.ZoomControlsActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.MediaControllerActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.GestureOverlayViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.SurfaceViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.TextureViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.StackViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.ViewStubActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.ViewAnimatorActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.ViewFlipperActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.ViewSwitcherActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.ImageSwitcherActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.TextSwitcherActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.AdapterViewFlipperActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.layouts.FrameLayoutActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.layouts.LinearLayoutHActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.layouts.LinearLayoutVActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.layouts.TableLayoutActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.layouts.TableRowActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.layouts.GridLayoutActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.layouts.RelativeLayoutActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.textfield.PlainTextActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.textfield.PersonNameActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.textfield.EmailActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.textfield.PhoneActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.textfield.PostalAddressActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.textfield.MultilineTextActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.textfield.TimeActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.textfield.DateActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.textfield.NumberActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.TextViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.ButtonActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.RadioButtonActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.CheckBoxActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.SwitchActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.ToggleButtonActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.ImageButtonActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.ImageViewActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.ProgressBarActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.SeekBarActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.RatingBarActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.SpinnerActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.widgets.WebViewActivity" />
+
+        <service
+            android:name="com.example.chengqi.mycoderepo.app.AppService01"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.example.chengqi.mycoderepo.app.ACTION01" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.example.chengqi.mycoderepo.app.DemoContentProvider"
+            android:authorities="com.example.chengqi"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.example.chengqi.mycoderepo.app.DemoBroadCastReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter android:priority="100" >
+                <action android:name="com.example.chengqi.mycoderepo.app.bc2" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HardwareActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWKeyActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWDisplayActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWTouchActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWVibratorActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWBatteryActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWPowerActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWBluetoothActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWWifiActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWEarphoneActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWCameraActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWStorageActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWSensorsActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWGPSActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWFingerprintActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWNFCActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWUSBActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HWPrintActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.AccelerometerActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.MagneticFieldActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.OrientationActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.GyroscopeActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.LightActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.PressureActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.TemperatureActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.ProximityActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.GravityActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.LinearAccelerationActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.RotationVectorActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.RelativeHumidityActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.AmbientTemperatureActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.UncalibratedMagneticFieldActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.UncalibratedRotationVectorActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.UncalibratedGyroscopeActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.SignificantMotionActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.StepDetectorActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.StepCounterActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.GeoMagneticRotationVectorActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.HeartRateActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.TiltDetectorActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.WakeGestureActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.GlanceGestureActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.hardware.PickUpActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.SoftwareActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.SystemInfoActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.NetActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.SoftTimeActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.OpenGLActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.TtsActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.CryptoActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.AudioVideoActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.AppWidgetActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.APKActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.GestureActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.WallpaperActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.layouts.ExcelDemoActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.layouts.Excel2DemoActivity" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.DemoViewFlipperFragment" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.DemoSurfaceView" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.DemoAnimation" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.DemoViewPager" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.DemoVoice" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.DemoShare" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.DemoDialog" />
+        <activity
+            android:name="com.example.chengqi.mycoderepo.app.StandActivity"
+            android:exported="true"
+            android:launchMode="standard" />
+        <activity
+            android:name="com.example.chengqi.mycoderepo.app.SingleTopActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.example.chengqi.mycoderepo.app.SingleTaskActivity"
+            android:exported="true"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.example.chengqi.mycoderepo.app.SingleInstanceActivity"
+            android:exported="true"
+            android:launchMode="singleInstance" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.DemoListSearch" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.ChooseFileActivity" />
+        <activity
+            android:name="com.example.chengqi.mycoderepo.software.NotificationActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.example.chengqi.mycoderepo.expert.DemoAnimation"
+            android:theme="@android:style/Theme.Material.Light" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.DemoVoiceRecognition" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.IFlyTekSpeechRecognition" />
+        <activity android:name="com.example.chengqi.mycoderepo.software.DemoExcel" >
+        </activity>
+        <activity android:name="com.example.chengqi.mycoderepo.app.DemoMultiTask" >
+        </activity>
+    </application>
+
+</manifest>
