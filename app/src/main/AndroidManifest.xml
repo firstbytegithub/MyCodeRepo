@@ -202,7 +202,7 @@
         <activity android:name="com.example.chengqi.mycoderepo.layouts.ExcelDemoActivity" />
         <activity android:name="com.example.chengqi.mycoderepo.layouts.Excel2DemoActivity" />
         <activity android:name="com.example.chengqi.mycoderepo.expert.DemoViewFlipperFragment" />
-        <activity android:name="com.example.chengqi.mycoderepo.expert.DemoSurfaceView" />
+        <activity android:name="com.example.chengqi.mycoderepo.expert.DemoSurfaceView" android:hardwareAccelerated="true" />
         <activity android:name="com.example.chengqi.mycoderepo.software.DemoAnimation" />
         <activity android:name="com.example.chengqi.mycoderepo.expert.DemoViewPager" />
         <activity android:name="com.example.chengqi.mycoderepo.software.DemoVoice" />

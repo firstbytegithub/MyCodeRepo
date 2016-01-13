@@ -9,12 +9,15 @@ import android.graphics.Path;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
+import android.os.Handler;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
+import android.widget.TextView;
 
 /**
  * Created by archermind on 12/23/15.
@@ -75,12 +78,32 @@ public class GameSurface extends SurfaceView
     int maxx = 0;
     int maxy = 0;
 
+    boolean mDrawInThread = false;
+
+    SurfaceHolder mSurfaceHolder2;
+
     private float mScale = 1.0f;
 
+    private TextView mTextTip = null;
+
     public void setscale(float scale) {
+        if (scale < 0.5f) {
+            return;
+        }
         mScale = scale;
         generateBitmap(mScale);
+        if (!mDrawInThread) {
+            syncDraw();
+        }
     }
+
+    Handler handler = new Handler() {
+
+        @Override
+        public void handleMessage(Message msg) {
+
+        }
+    };
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -102,6 +125,9 @@ public class GameSurface extends SurfaceView
                 Log.d(LOG_TAG, "on touch ACTION_MOVE" + "x=" + event.getX() + "y=" + event.getY());
                 mMoveX = event.getX();
                 mMoveY = event.getY();
+                if (!mDrawInThread) {
+                    syncDraw();
+                }
                 break;
             default:
                 break;
@@ -116,9 +142,13 @@ public class GameSurface extends SurfaceView
                 mBkBitmap = null;
                 System.gc();
             }
-            float nn = scale*720*2;
-            int bitmapw = (int)(scale*720*2);
-            int bitmaph = (int)(scale*1136*2);
+            Log.d(LOG_TAG, "ww=" + getWidth() + "hh=" + getHeight());
+            int ww = getWidth();
+            int hh = getHeight();
+
+            float nn = scale*ww*2;
+            int bitmapw = (int)(scale*ww*2);
+            int bitmaph = (int)(scale*hh*2);
             mBkBitmap = Bitmap.createBitmap(bitmapw, bitmaph, Bitmap.Config.ARGB_8888);
             Canvas bkCanvas = new Canvas(mBkBitmap);
             Log.d(LOG_TAG, "canvas w=" + bkCanvas.getWidth() + " canvas h=" + bkCanvas.getHeight() + "nn=" + nn);
@@ -148,8 +178,8 @@ public class GameSurface extends SurfaceView
                 bkCanvas.drawText("abcABC央视网消息(新闻联播)：中共中央总书记、国家主席、中央军委主席习近平12日上午在中国共产党", 0, y, pText);
                 y += (int)(scale*100);
             }
-            maxx = bitmapw - 720;
-            maxy = bitmaph - 1136;
+            maxx = bitmapw - ww;
+            maxy = bitmaph - hh;
             mSx = mSx*scale;
             mSy = mSy*scale;
         }
@@ -157,7 +187,50 @@ public class GameSurface extends SurfaceView
 
     public void setController(GameController gameController) {
         mController = gameController;
-        generateBitmap(1);
+
+    }
+
+    public void syncDraw() {
+        float t1, t2;
+        Canvas c = mSurfaceHolder2.lockCanvas();
+        if (c != null) {
+//                        doDraw(c);
+//                        Log.d(LOG_TAG, "main canvas w=" + c.getWidth() + " canvas h=" + c.getHeight());
+            synchronized (lock) {
+                t1 = mSxBK + mDownX - mMoveX;
+                t2 = mSyBK + mDownY - mMoveY;
+                if (t1 < minx) {
+                    t1 = minx;
+                }
+                if (t2 < miny) {
+                    t2 = miny;
+                }
+                if (t1 > maxx) {
+                    t1 = maxx;
+                }
+                if (t2 > maxy) {
+                    t2 = maxy;
+                }
+                mSx = t1;
+                mSy = t2;
+
+                //                        Log.d(LOG_TAG, "mSx=" + mSx + " mSy=" + mSy);
+                Rect src = new Rect((int) mSx, (int) mSy, (int) mSx + c.getWidth(), (int) mSy + c.getHeight());
+                Rect des = new Rect(0, 0, c.getWidth(), c.getHeight());
+                c.drawBitmap(mBkBitmap, src, des, null);
+
+                Paint pp = new Paint();
+                pp.setColor(Color.BLUE);
+                pp.setTextSize(60);
+                boolean b = c.isHardwareAccelerated();
+                if (b) {
+                    c.drawText("hardware", 200, 200, pp);
+                } else {
+                    c.drawText("no hardware", 200, 200, pp);
+                }
+            }
+            mSurfaceHolder2.unlockCanvasAndPost(c);
+        }
     }
 
     class DrawThread extends Thread {
@@ -182,6 +255,7 @@ public class GameSurface extends SurfaceView
 //                Log.d(LOG_TAG, "1");
                 try {
 //                    Log.d(LOG_TAG, "2");
+                    Log.d(LOG_TAG, "draw!");
                     Canvas c = mSurfaceHolder.lockCanvas();
                     if (c != null) {
 //                        doDraw(c);
@@ -208,6 +282,16 @@ public class GameSurface extends SurfaceView
                             Rect src = new Rect((int)mSx, (int)mSy, (int)mSx+c.getWidth(), (int)mSy+c.getHeight());
                             Rect des = new Rect(0, 0, c.getWidth(), c.getHeight());
                             c.drawBitmap(mBkBitmap, src, des, null);
+
+                            Paint pp = new Paint();
+                            pp.setColor(Color.BLUE);
+                            pp.setTextSize(60);
+                            boolean b = c.isHardwareAccelerated();
+                            if (b) {
+                                c.drawText("hardware", 200, 200, pp);
+                            } else {
+                                c.drawText("no hardware", 200, 200, pp);
+                            }
                         }
                         mSurfaceHolder.unlockCanvasAndPost(c);
                     }
@@ -281,7 +365,7 @@ public class GameSurface extends SurfaceView
 //            paintRed.setStrokeWidth(2);
 //            c.drawText("helloworld", 300, 600, paintRed);
 ////            Log.d("xxx", "text size = " + paintBlue.getTextSize());
-//            paintBlue.setTextSize(36);
+//            paintBlue.setTextSize(36);syncDraw();
 //            paintYellow.setTextSize(40);
 //            c.drawTextOnPath("iloveyou", pa, 0, 0, paintBlue);
 //            c.translate(c.getWidth() / 2, c.getHeight() / 2);
@@ -297,9 +381,15 @@ public class GameSurface extends SurfaceView
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
         Log.d(LOG_TAG, "surfaceCreated");
-        mDrawThread = new DrawThread(null, holder);
-        mDrawThread.mRunning = true;
-        mDrawThread.start();
+        mSurfaceHolder2 = holder;
+        generateBitmap(1);
+        if (!mDrawInThread) {
+            syncDraw();
+        } else {
+            mDrawThread = new DrawThread(null, holder);
+            mDrawThread.mRunning = true;
+            mDrawThread.start();
+        }
     }
 
     @Override
@@ -310,13 +400,15 @@ public class GameSurface extends SurfaceView
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
         Log.d(LOG_TAG, "surfaceDestroyed");
-        mDrawThread.mRunning = false;
-        try {
-            mDrawThread.join();
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (mDrawInThread) {
+            mDrawThread.mRunning = false;
+            try {
+                mDrawThread.join();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+    //        mDrawThread.interrupt();
+            mDrawThread = null;
         }
-//        mDrawThread.interrupt();
-        mDrawThread = null;
     }
 }
