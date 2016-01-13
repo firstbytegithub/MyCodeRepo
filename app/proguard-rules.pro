@@ -15,3 +15,13 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-dontwarn com.iflytek.**
+-keep class com.iflytek.** { *; }
+
+-dontwarn org.apache.poi.**
+-keep class org.apache.poi.** { *; }
+-keep class com.iflytek.** { *; }
+
+-dontwarn com.baidu.**
+-keep class com.baidu.** { *; }
