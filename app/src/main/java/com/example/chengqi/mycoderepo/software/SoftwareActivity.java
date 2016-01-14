@@ -36,7 +36,8 @@ public class SoftwareActivity extends AppCompatActivity
             "notification",
             "voice recognition",
             "IFlyTekSpeechRecognition",
-            "Excel"
+            "Excel",
+            "BenchMark"
     };
 
     @Override
@@ -114,6 +115,9 @@ public class SoftwareActivity extends AppCompatActivity
                 break;
             case 18:
                 intent = new Intent(this, DemoExcel.class);
+                break;
+            case 19:
+                intent = new Intent(this, BenchMark.class);
                 break;
         }
 
