@@ -116,9 +116,9 @@ public class SoftwareActivity extends AppCompatActivity
             case 18:
                 intent = new Intent(this, DemoExcel.class);
                 break;
-            case 19:
-                intent = new Intent(this, BenchMark.class);
-                break;
+//            case 19:
+//                intent = new Intent(this, BenchMark.class);
+//                break;
         }
 
         if (intent != null) {
