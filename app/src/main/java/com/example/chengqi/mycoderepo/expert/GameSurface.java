@@ -149,6 +149,7 @@ public class GameSurface extends SurfaceView
             float nn = scale*ww*2;
             int bitmapw = (int)(scale*ww*2);
             int bitmaph = (int)(scale*hh*2);
+
             mBkBitmap = Bitmap.createBitmap(bitmapw, bitmaph, Bitmap.Config.ARGB_8888);
             Canvas bkCanvas = new Canvas(mBkBitmap);
             Log.d(LOG_TAG, "canvas w=" + bkCanvas.getWidth() + " canvas h=" + bkCanvas.getHeight() + "nn=" + nn);

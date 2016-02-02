@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chengqi.mycoderepo">
+    package="com.example.chengqi.mycoderepo" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -21,8 +21,8 @@
         android:icon="@mipmap/ic_android_white_48dp"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -121,7 +121,7 @@
         <service
             android:name=".app.AppService01"
             android:enabled="true"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="com.example.chengqi.mycoderepo.app.ACTION01" />
 
@@ -138,8 +138,8 @@
         <receiver
             android:name=".app.DemoBroadCastReceiver"
             android:enabled="true"
-            android:exported="true">
-            <intent-filter android:priority="100">
+            android:exported="true" >
+            <intent-filter android:priority="100" >
                 <action android:name="com.example.chengqi.mycoderepo.app.bc2" />
             </intent-filter>
         </receiver>
@@ -236,10 +236,14 @@
             android:theme="@android:style/Theme.Material.Light" />
         <activity android:name=".software.DemoVoiceRecognition" />
         <activity android:name=".software.IFlyTekSpeechRecognition" />
-        <activity android:name=".software.DemoExcel"></activity>
-        <activity android:name=".app.DemoMultiTask"></activity>
-        <activity android:name=".software.BenchMark"></activity>
-        <activity android:name=".expert.NdkActivity"></activity>
+        <activity android:name=".software.DemoExcel" />
+        <activity android:name=".app.DemoMultiTask" />
+        <activity android:name=".software.BenchMark" />
+        <activity android:name=".expert.NdkActivity" />
+        <activity android:name=".expert.KeyActivity" >
+        </activity>
+        <activity android:name=".expert.InternetActivity" >
+        </activity>
     </application>
 
 </manifest>

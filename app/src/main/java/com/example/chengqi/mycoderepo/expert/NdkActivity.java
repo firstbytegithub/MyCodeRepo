@@ -15,15 +15,15 @@ public class NdkActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ndk);
 
-        Log.d(TAG, "3+4=" + add(3, 4));
-        Log.d(TAG, "7-3=" + sub(7, 3));
+//        Log.d(TAG, "3+4=" + add(3, 4));
+//        Log.d(TAG, "7-3=" + sub(7, 3));
     }
 
-    private native int add(int a, int b);
-
-    private native int sub(int a, int b);
-
-    static {
-        System.loadLibrary("add");
-    }
+//    private native int add(int a, int b);
+//
+//    private native int sub(int a, int b);
+//
+//    static {
+//        System.loadLibrary("add");
+//    }
 }

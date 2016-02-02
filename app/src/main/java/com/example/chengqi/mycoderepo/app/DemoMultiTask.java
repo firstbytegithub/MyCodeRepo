@@ -127,6 +127,15 @@ public class DemoMultiTask extends Activity {
                 mLooperThread.start();
             }
         });
+
+        // run a time-waste func in another thread
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                // do something
+                // mButtonSendThread.disable()
+            }
+        }).run();
     }
 
     @Override

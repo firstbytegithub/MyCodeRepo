@@ -44,7 +44,8 @@ public class ExpertActivity extends AppCompatActivity
             "Dialog",
             "List Search",
             "Animation",
-            "NDK Demo"
+            "NDK Demo",
+            "Key"
     };
 
     @Override
@@ -146,6 +147,9 @@ public class ExpertActivity extends AppCompatActivity
                 break;
             case 26:
                 intent = new Intent(this, NdkActivity.class);
+                break;
+            case 27:
+                intent = new Intent(this, KeyActivity.class);
                 break;
         }
 
