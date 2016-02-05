@@ -45,7 +45,8 @@ public class ExpertActivity extends AppCompatActivity
             "List Search",
             "Animation",
             "NDK Demo",
-            "Key"
+            "Key",
+            "Internet"
     };
 
     @Override
@@ -150,6 +151,9 @@ public class ExpertActivity extends AppCompatActivity
                 break;
             case 27:
                 intent = new Intent(this, KeyActivity.class);
+                break;
+            case 28:
+                intent = new Intent(this, InternetActivity.class);
                 break;
         }
 
