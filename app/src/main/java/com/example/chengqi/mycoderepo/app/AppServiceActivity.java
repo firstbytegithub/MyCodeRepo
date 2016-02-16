@@ -82,5 +82,13 @@ public class AppServiceActivity extends AppCompatActivity {
                 }
             }
         });
+        ((Button)findViewById(R.id.button110)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(LOG_TAG, "send broadcast to service");
+                Intent intent = new Intent(AppService01.ACTION01);
+                sendBroadcast(intent);
+            }
+        });
     }
 }

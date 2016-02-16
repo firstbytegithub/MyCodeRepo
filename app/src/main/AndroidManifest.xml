@@ -104,7 +104,13 @@
         <activity android:name=".textfield.TimeActivity" />
         <activity android:name=".textfield.DateActivity" />
         <activity android:name=".textfield.NumberActivity" />
-        <activity android:name=".widgets.TextViewActivity" />
+        <activity android:name=".widgets.TextViewActivity" >
+            <intent-filter>
+                <action android:name="com.archermind.com.widgettest" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".widgets.ButtonActivity" />
         <activity android:name=".widgets.RadioButtonActivity" />
         <activity android:name=".widgets.CheckBoxActivity" />
@@ -124,9 +130,11 @@
             android:exported="true" >
             <intent-filter>
                 <action android:name="com.example.chengqi.mycoderepo.app.ACTION01" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+            <!--<intent-filter>-->
+                <!--<action android:name="com.example.chengqi.mycoderepo.app.appservice01.action01" />-->
+            <!--</intent-filter>-->
         </service>
 
         <provider
@@ -244,6 +252,20 @@
         </activity>
         <activity android:name=".expert.InternetActivity" >
         </activity>
+
+        <receiver android:name=".app.NewAppWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="com.archermind.appwidget.broadcast" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
     </application>
 
 </manifest>
