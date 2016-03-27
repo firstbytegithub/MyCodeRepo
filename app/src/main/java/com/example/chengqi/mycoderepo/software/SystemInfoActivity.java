@@ -131,10 +131,18 @@ public class SystemInfoActivity extends AppCompatActivity {
         output("avail memory=" + getAvailMemory());
         output("----------------------------");
         Point pSize = new Point();
-        getWindowManager().getDefaultDisplay().getSize(pSize);
+        if (Build.VERSION.SDK_INT >= 17) {
+            getWindowManager().getDefaultDisplay().getRealSize(pSize);
+        } else {
+            getWindowManager().getDefaultDisplay().getSize(pSize);
+        }
         output("display width/height=" + pSize.toString());
         DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
+        if (Build.VERSION.SDK_INT >= 17) {
+            getWindowManager().getDefaultDisplay().getRealMetrics(dm);
+        } else {
+            getWindowManager().getDefaultDisplay().getMetrics(dm);
+        }
         output(dm.toString());
         output("----------------------------");
         AudioManager mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
