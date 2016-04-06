@@ -25,6 +25,7 @@ public class LayoutsActivity extends AppCompatActivity
             "TableRow",
             "GridLayout",
             "RelativeLayout",
+            "DrawerLayout"
     };
 
     @Override
@@ -66,6 +67,9 @@ public class LayoutsActivity extends AppCompatActivity
                 break;
             case 6:
                 intent = new Intent(this, RelativeLayoutActivity.class);
+                break;
+            case 7:
+                intent = new Intent(this, DrawerLayoutActivity.class);
                 break;
         }
 

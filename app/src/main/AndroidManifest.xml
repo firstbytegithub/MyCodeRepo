@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.chengqi.mycoderepo" >
+    package="com.example.chengqi.mycoderepo">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -21,8 +21,8 @@
         android:icon="@mipmap/ic_android_white_48dp"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" >
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -104,7 +104,7 @@
         <activity android:name=".textfield.TimeActivity" />
         <activity android:name=".textfield.DateActivity" />
         <activity android:name=".textfield.NumberActivity" />
-        <activity android:name=".widgets.TextViewActivity" >
+        <activity android:name=".widgets.TextViewActivity">
             <intent-filter>
                 <action android:name="com.archermind.com.widgettest" />
 
@@ -127,14 +127,15 @@
         <service
             android:name=".app.AppService01"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.example.chengqi.mycoderepo.app.ACTION01" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <!--<intent-filter>-->
-                <!--<action android:name="com.example.chengqi.mycoderepo.app.appservice01.action01" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="com.example.chengqi.mycoderepo.app.appservice01.action01" /> -->
+            <!-- </intent-filter> -->
         </service>
 
         <provider
@@ -146,8 +147,8 @@
         <receiver
             android:name=".app.DemoBroadCastReceiver"
             android:enabled="true"
-            android:exported="true" >
-            <intent-filter android:priority="100" >
+            android:exported="true">
+            <intent-filter android:priority="100">
                 <action android:name="com.example.chengqi.mycoderepo.app.bc2" />
             </intent-filter>
         </receiver>
@@ -248,16 +249,13 @@
         <activity android:name=".app.DemoMultiTask" />
         <activity android:name=".software.BenchMark" />
         <activity android:name=".expert.NdkActivity" />
-        <activity android:name=".expert.KeyActivity" >
-        </activity>
-        <activity android:name=".expert.InternetActivity" >
-        </activity>
+        <activity android:name=".expert.KeyActivity"></activity>
+        <activity android:name=".expert.InternetActivity"></activity>
 
-        <receiver android:name=".app.NewAppWidget" >
+        <receiver android:name=".app.NewAppWidget">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="com.archermind.appwidget.broadcast" />
             </intent-filter>
@@ -266,6 +264,8 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/new_app_widget_info" />
         </receiver>
+
+        <activity android:name=".layouts.DrawerLayoutActivity"></activity>
     </application>
 
 </manifest>
